@@ -7,8 +7,18 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-card *ngFor="let nombre of casas">
+    <!-- {{nombre | json}} -->
+
+    <img *ngIf = "casa.ad.hasOwnProperty('thumbnail')" src="https://img.segundamano.mx/medium/{{casa.ad.thumbnail.path}}">
+
+    <ion-card-header *ndIf="casa.ad.hasOwnProperty('list_prince')">
+      {{casa.ad.list_price.label}}
+    </ion-card-header>
+
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
